@@ -3,7 +3,8 @@
 Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.palletsprojects.com/), utilizando uma arquitetura organizada por blueprints e templates.
 
 ## 🔧 Funcionalidades
-- Listar, pesquisar, adicionar, altear e apagar tarefas
+- Listar, pesquisar, adicionar, alterar e apagar tarefas
+- Temas dark, light e auto
 - Organização modular com Blueprints
 - Interface com HTML, CSS e JS
 - Banco de dados SQLite integrado
