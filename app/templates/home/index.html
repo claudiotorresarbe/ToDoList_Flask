@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}home{% endblock %}
+{% block body %}
+
+<div class="container py-5">
+  <div class="row align-items-center">
+
+    <!-- Texto da esquerda 
+    <div class="col-md-6 mb-4 mb-md-0">
+      <h2>Assine nossa Newsletter</h2>
+      <p>Fique por dentro das novidades, promoções e conteúdos exclusivos. Inscreva-se com seu email e não perca nada!</p>
+    </div>-->
+
+    <!-- Formulário da direita 
+    <div class="col-md-6">
+      <form method="POST" action="{{ url_for('bp_home.newsletter') }}" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+        {{ form1.csrf_token }}
+        <div class="form-floating mb-3">
+          {{ form1.email(class="form-control", id="floatingInput", placeholder="name@example.com") }}
+          <label for="floatingInput">Email</label>
+        </div>
+        {{ form1.submit(class="w-100 btn btn-lg btn-outline-secondary") }}
+      </form>
+    </div>-->
+    
+  </div>
+</div>
+
+{% endblock %}
+    

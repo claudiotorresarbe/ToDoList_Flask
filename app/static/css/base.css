@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Estilo para alerta */
+#myAlert {
+  position: fixed;
+  top: 70px;
+  right: 600px;
+  width: 300px;
+  z-index: 1050;
+}
+    

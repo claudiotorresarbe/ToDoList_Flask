@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}atividades{% endblock %}
+{% block body %}
+    <main class="form-single w-100 m-auto">
+        <form method="POST" action="{{ url_for('bp_atividadesform.'+action,id=id) }}">
+            <h1 class="h3 mb-3 fw-normal">Atividades</h1><hr>
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+            <div class="form mb-2">
+                {{ form.descricao.label(class="form-label") }}
+                {{ form.descricao(class="form-control", disabled=(action in('info','delete'))) }}
+            </div>
+            <div class="form mb-2">
+                {{ form.status.label(class="form-label") }}
+                {{ form.status(class="form-select", disabled=(action in('info','delete'))) }}
+            </div> 
+            <div class="d-grid gap-2">
+                {% if button in {'Salvar': 'btn-success', 'Apagar': 'btn-danger', 'Alterar': 'btn-warning'} %}
+                    <button type="submit" class="btn {{ {'Salvar': 'btn-success', 'Apagar': 'btn-danger', 'Alterar': 'btn-warning'}[button] }}">
+                        {{ button }}
+                    </button>
+                {% endif %}
+                <a class="btn btn-outline-light" href="{{ url_for('bp_atividades.atividades') }}" role="button">Voltar</a>
+            </div>
+        </form>
+    </main>
+{% endblock %}
+    

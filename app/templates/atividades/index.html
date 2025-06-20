@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}atividades{% endblock %}
+{% block body %}
+
+<div class="container form-table">
+
+    <div class="position-relative">
+        <div class="position-relative top-0 start-0">
+            <h1>Atividades</h1>
+        </div>
+        <div class="position-absolute top-0 end-0">
+            <form method="GET" class="row g-3">
+                <div class="col-auto">
+                    <input type="text" name="search" class="form-control" value="{{ request.args.get('search') or '' }}" placeholder="Pesquisar por..." autocomplete="off">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Pesquisar</button>
+                </div>
+            </form>  
+        </div>
+    </div>
+    
+    <hr>
+
+    {% if data %}
+
+    <table class="table table-striped table-dark table-hover">
+        <tr>
+            <thead>
+                <th scope="col">COL A</th>
+                <th scope="col">COL B</th>
+                <th scope="col">COL C</th>
+                <th scope="col"><a href="{{ url_for('bp_atividadesform.atividadesform',action='create') }}">+ Novo</a></th>
+            </thead>
+        </tr>
+        {% for a,b,c in data[0:row] %}
+        <tr>
+            <th>{{a}}</th>
+            <td>{{b}}</td>
+            <td>{{c}}</td>
+            <td>
+                <a class="btn btn-info btn-sm" href="{{ url_for('bp_atividadesform.atividadesform',action='info',id=a) }}">Ver</a>
+                <a class="btn btn-warning btn-sm" href="{{ url_for('bp_atividadesform.atividadesform',action='update',id=a) }}">Editar</a>
+                <a class="btn btn-danger btn-sm" href="{{ url_for('bp_atividadesform.atividadesform',action='delete',id=a) }}">Deletar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+
+    <div class="position-relative">
+    {% if request.args.get('page')|int > 0 %}
+        <div class="position-absolute top-0 start-0">
+            <a class="btn btn-primary" href="/atividades?search={{request.args.get('search') or ''}}&page={{request.args.get('page')|int -1}}">Anterior</a>
+        </div>
+    {% else %}
+        <div class="position-absolute top-0 start-0">
+            <a class="btn btn-primary disabled" role="button" aria-disabled="true">Anterior</a>
+        </div>
+    {% endif %}
+
+    {% if data|length >row %}
+        <div class="position-absolute top-0 end-0">
+            <a class="btn btn-primary" href="/atividades?search={{request.args.get('search') or ''}}&page={{request.args.get('page')|int +1}}">Próximo</a>
+        </div>
+    {% else %}
+        <div class="position-absolute top-0 end-0">
+            <a class="btn btn-primary disabled" role="button" aria-disabled="true">Próximo</a>
+        </div>
+    {% endif %}
+    </div>
+    {% else %}
+        <p class="text-center"><b>=(</b></p> 
+        <p class="text-center"><b>Nenhum item encontrato!</b></p> 
+        {% if request.args.get('search') %}
+        <p class="text-center">Clique <a href="{{ url_for('bp_atividades.atividades') }}">aqui</a> para voltar</p>
+        {% else %}
+        <p class="text-center">Clique <a href="{{ url_for('bp_atividadesform.atividadesform',action='create') }}">aqui</a> para adicionar um novo registro</p>
+        {% endif %}
+    {% endif %}
+
+</div>
+
+{% endblock %}
+    
