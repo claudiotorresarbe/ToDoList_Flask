@@ -16,26 +16,39 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
 
 ## 📁 Estrutura do Projeto
 ```
-📦 ToDoList\
+📦 ToDoList_Flask\
 │
 ├── app\
 │   ├── blueprint\
 │   │   ├── atividades\
+|   |   |   └── __init__.py
 │   │   ├── atividadesform\
-│   │   └── home\
+|   |   |   └── __init__.py
+│   │   ├── home\
+|   |   |   └── __init__.py
 │   ├── config\
-│   └── __init__.py
-│
-├── static\
-│   ├── css\
-│   └── js\
-├── templates\
-│   └── [subpastas]
-│
-├── database.db
-├── main.py
-├── requirements.txt
+│   │   ├── __config__.py
+│   │   ├── __db__.py
+│   │   ├── __email__.py
+│   │   ├── __rate_limiter__.py
+│   |   └── __utils__.py
+│   ├── static\
+│   |   ├── css\
+│   │   |   └── base.css
+|   │   ├── js\
+│   │   |   └── base.js
+│   ├── templates\
+│   │   ├── atividades\
+|   |   |   └── index.html
+│   │   ├── atividadesform\
+|   |   |   └── index.html
+│   │   ├── home\
+|   |   |   └── index.html
+|   |   └── base.html
+|   ├── main.py
+|   └── requirements.txt
 └── .gitignore
+
 ```
 
 ## ▶️ Como rodar
@@ -43,7 +56,7 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
 1. Clone o repositório:
    ```bash
    git clone https://github.com/claudiotorresarbe/ToDoList_Flask.git
-   cd nome-do-repo
+   cd ToDoList_Flask
    ```
 
 2. Crie e ative um ambiente virtual:
