@@ -20,31 +20,31 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
 │
 ├── app\
 │   ├── blueprint\
-│       ├── atividades\
-|           └── __init__.py
-│       ├── atividadesform\
-|           └── __init__.py
-│       ├── home\
-|           └── __init__.py
+│   |   ├── atividades\
+|   |   |   └── __init__.py
+│   |   ├── atividadesform\
+|   |   |   └── __init__.py
+│   |   ├── home\
+|   |       └── __init__.py
 │   ├── config\
-│       ├── __config__.py
-│       ├── __db__.py
-│       ├── __email__.py
-│       ├── __rate_limiter__.py
-│       └── __utils__.py
+│   |   ├── __config__.py
+│   |   ├── __db__.py
+│   |   ├── __email__.py
+│   |   ├── __rate_limiter__.py
+│   |   └── __utils__.py
 │   ├── static\
-│       ├── css\
-│           └── base.css
-|       ├── js\
-│           └── base.js
+│   |   ├── css\
+│   |   |   └── base.css
+|   |   ├── js\
+│   |       └── base.js
 │   ├── templates\
-│       ├── atividades\
-|       |   └── index.html
-│       ├── atividadesform\
-|       |   └── index.html
-│       ├── home\
-|       |   └── index.html
-|       └── base.html
+│   |   ├── atividades\
+|   |   |   └── index.html
+│   |   ├── atividadesform\
+|   |   |   └── index.html
+│   |   ├── home\
+|   |   |   └── index.html
+|   |   └── base.html
 |   ├── main.py
 |   └── requirements.txt
 └── .gitignore
