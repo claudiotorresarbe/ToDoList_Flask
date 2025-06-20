@@ -24,7 +24,7 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
 |   |   |   └── __init__.py
 │   |   ├── atividadesform\
 |   |   |   └── __init__.py
-│   |   ├── home\
+│   |   └── home\
 |   |       └── __init__.py
 │   ├── config\
 │   |   ├── __config__.py
@@ -68,12 +68,12 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
 
 3. Instale as dependências:
    ```bash
-   pip install -r requirements.txt
+   pip install -r app\requirements.txt
    ```
 
 4. Rode o app:
    ```bash
-   python main.py
+   python app\main.py
    ```
 
 ## 📸 Imagens (opcional)
