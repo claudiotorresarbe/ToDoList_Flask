@@ -77,7 +77,9 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
    ```
 
 ## 📸 Imagens (opcional)
-Adicione prints da tela inicial, lista de tarefas e formulário.
+<img src="img/01.png" alt="Minha imagem" width="300"/>
+<img src="img/02.png" alt="Minha imagem" width="300"/>
+<img src="img/03.png" alt="Minha imagem" width="300"/>
 
 ## 📄 Licença
 Este projeto é de uso livre para fins educacionais e de portfólio.
