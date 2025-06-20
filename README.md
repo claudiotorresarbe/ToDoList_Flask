@@ -3,7 +3,7 @@
 Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.palletsprojects.com/), utilizando uma arquitetura organizada por blueprints e templates.
 
 ## 🔧 Funcionalidades
-- Adicionar, listar e remover tarefas
+- Listar, pesquisar, adicionar, altear e apagar tarefas
 - Organização modular com Blueprints
 - Interface com HTML, CSS e JS
 - Banco de dados SQLite integrado
@@ -77,8 +77,13 @@ Aplicativo web simples de lista de tarefas criado com [Flask](https://flask.pall
    ```
 
 ## 📸 Imagens
+Imagem ao iniciar, sem dados na base.
 <img src="img/01.PNG" alt="Minha imagem" width="300"/>
+
+Imagem do formulário.
 <img src="img/02.PNG" alt="Minha imagem" width="300"/>
+
+Imagem da lista com dados.
 <img src="img/03.PNG" alt="Minha imagem" width="300"/>
 
 ## 📄 Licença
