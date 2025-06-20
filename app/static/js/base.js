@@ -9,7 +9,7 @@ setTimeout(function() {
 }, 3000);
 
 
-
+//função para alterar o tema
 const themeIcon = document.getElementById('themeIcon');
 
 const updateThemeIcon = (theme) => {
